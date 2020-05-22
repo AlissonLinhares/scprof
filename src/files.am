@@ -1,0 +1,10 @@
+H_FILES += \
+	scprof/profile.h \
+	scprof/observers.h \
+	scprof/scprof.h
+
+INCDIRS += \
+  scprof
+
+## Taf!
+## :vim:ft=automake:

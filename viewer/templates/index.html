@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCProf Viewer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/plotly-latest.min.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+</head>
+<body>
+	<select id="files">
+		{% for files in file_list %}
+			<option value="{{ files }}">{{ files }}</option>
+		{% endfor %}
+	</select>
+
+	<div class="row">
+		<div class="column" style="overflow-y: auto;">
+			<pre id="code"></pre>
+		</div>
+		<div class="column" style="overflow-y: auto;">
+			<div id="utilizationHist"></div>
+			<div id="freqHist"></div>
+			<div id="changesHist"></div>
+			<div id="operations"></div>
+		</div>
+	</div>
+</body>
+</html>

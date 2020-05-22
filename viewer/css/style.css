@@ -1,0 +1,95 @@
+html,body {
+	height:100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	height: 800px; /* Should be removed. Only for demonstration */
+}
+
+#files {
+	width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+pre {
+	overflow:auto;
+	margin:0 0 1em;
+	padding:.5em 1em;
+}
+
+pre code,
+pre .line-number {
+	font:normal normal 12px/14px "Courier New",Courier,Monospace;
+	color:black;
+	display:block;
+}
+
+pre .line-number {
+	float:left;
+	margin:0 1em 0 -1em;
+	border-right:1px solid;
+	text-align:right;
+}
+
+pre .line-number span {
+	display:block;
+	padding:0 .5em 0 1em;
+}
+
+pre .cl {
+	display:block;
+	clear:both;
+}
+
+.tooltip {
+	position: relative;
+	display: block;
+}
+
+.tooltiptext {
+	visibility: hidden;
+	width: 320px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	white-space: pre-wrap;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 25%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 25%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
