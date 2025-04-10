@@ -7,8 +7,8 @@ In this work we present an open source tool for profiling fixed-point and floati
 
 ### Installation
 ```sh
+pip install flask
 ./install.sh
-
 ```
 
 ### Configuration
@@ -19,3 +19,27 @@ the runtime path.
 ```sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/systemc/lib-linux64/
 ```
+
+### Documentation
+Original Paper: <a href="https://github.com/AlissonLinhares/scprof/blob/master/scprof/doc/sbcci_2020.pdf">scprof.pdf</a><br>
+Presentation slides: <a href="https://github.com/AlissonLinhares/scprof/blob/master/scprof/doc/sbcci_pres_2020.pdf">slides.pdf</a><br>
+
+### Demo
+See the demo project for details on using the profiler and viewer:
+```sh
+cd demo
+make run
+make show
+```
+
+### Screenshots
+<p style="text-indent: 2em;" align="justify">
+SCProf overrides all fixed-point operations within the SystemC library. After running a simulation with representative data, you can use the viewer to analyze what happened inside the application. The tool provides tips on how to improve bit utilization and reduce hardware requirements. The project has been used by IdeaIP to substantially enhance their DSP hardware.
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AlissonLinhares/scprof/master/doc/scprof0.png" width="45%">
+  <img src="https://raw.githubusercontent.com/AlissonLinhares/scprof/master/doc/scprof1.png" width="45%">
+  <br>
+  <img src="https://raw.githubusercontent.com/AlissonLinhares/scprof/master/doc/scprof2.png" width="45%">
+  <img src="https://raw.githubusercontent.com/AlissonLinhares/scprof/master/doc/scprof3.png" width="45%">
+</p>

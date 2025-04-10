@@ -43,6 +43,7 @@ cp -rf ext/src/tlm_utils/Makefile.in systemc/src/tlm_utils/Makefile.in
 cp -rf src systemc/src/sysc/scprof
 
 echo " -- Configuring Systemc + scprof."
+mkdir bin
 cd bin
 ../systemc/configure --prefix=$SYSTEMC_INSTALL_PATH
 

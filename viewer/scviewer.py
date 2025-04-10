@@ -1,6 +1,6 @@
 import webbrowser
 import sys
-import cgi
+import html
 import socket
 import threading
 
@@ -91,7 +91,7 @@ def mark_lines(lines, entries):
         i += 1
 
 def removeSpecialCharacters(data):
-    return cgi.escape(data)
+    return html.escape(data)
 
 def pickAnUnusedPort():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
